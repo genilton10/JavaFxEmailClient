@@ -1,10 +1,8 @@
 package com.lisboa.view;
-
 public enum FontSize {
     SMALL,
     MEDIUM,
     BIG;
-
     public static String getCssPath(FontSize fontSize){
         switch (fontSize){
             case MEDIUM:

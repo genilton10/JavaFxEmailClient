@@ -10,5 +10,8 @@
     <orderEntry type="library" name="javafx-swt" level="project" />
     <orderEntry type="library" name="javax.mail-1.6.2" level="project" />
     <orderEntry type="library" name="activation" level="project" />
+    <orderEntry type="library" name="mockito-all-1.10.19" level="project" />
+    <orderEntry type="library" name="junit5-0.30" level="project" />
+    <orderEntry type="library" name="junit-jupiter-api-5.7.0" level="project" />
   </component>
 </module>
