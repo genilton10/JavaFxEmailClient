@@ -20,7 +20,7 @@ public class EmailManager {
     public ObservableList<EmailAccount> getEmailAccounts(){
         return emailAccounts;
     }
-    public EmailMessage getSelectedMessage(EmailMessage emailMessage) {
+    public EmailMessage getSelectedMessage() {
         return selectedMessage;
     }
     public void setSelectedMessage(EmailMessage selectedMessage) {

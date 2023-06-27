@@ -16,7 +16,7 @@ public class FolderUpdaterService extends Service {
             protected Object call() throws Exception {
                 for (;;){
                     try {
-                        Thread.sleep(5000);
+                        Thread.sleep(6000);
                         for (Folder folder: folderList){
                             if (folder.getType() != Folder.HOLDS_FOLDERS && folder.isOpen()){
                                 folder.getMessageCount();

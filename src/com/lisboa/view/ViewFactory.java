@@ -47,13 +47,17 @@ public class ViewFactory {
     }
     public void  showOptionsWindow(){
         System.out.println("Options window called!");
-        BaseController Controller = new OptionsWindowController(emailManager, this, "OptionsWindow.fxml");
-        initializeState(Controller);
+        BaseController controller = new OptionsWindowController(emailManager, this, "OptionsWindow.fxml");
+        initializeState(controller);
     }
     public void  showComposeMessageWindow(){
         System.out.println("ComposeMessage window called!");
-        BaseController Controller = new ComposeMessageController(emailManager, this, "ComposeMessageWindow.fxml");
-        initializeState(Controller);
+        BaseController controller = new ComposeMessageController(emailManager, this, "ComposeMessageWindow.fxml");
+        initializeState(controller);
+    }
+    public void showEmailDetailsWindow(){
+        BaseController controller = new EmailDetailsController(emailManager, this, "EmailDetailsWindow.fxml");
+        initializeState(controller);
     }
     private void initializeState(BaseController baseController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(baseController.getFxmlName()));
