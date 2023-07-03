@@ -11,16 +11,19 @@ import javax.mail.Store;
 import javax.mail.event.MessageCountEvent;
 import javax.mail.event.MessageCountListener;
 import java.util.List;
+
 public class FetchFoldersService extends Service<Void> {
     private Store store;
     private EmailTreeItem<String> foldersRoot;
     private List<Folder> folderList;
     private IconResolver iconResolver = new IconResolver();
+
     public FetchFoldersService(Store store, EmailTreeItem<String> foldersRoot, List<Folder> folderList) {
         this.store = store;
         this.foldersRoot = foldersRoot;
         this.folderList = folderList;
     }
+
     @Override
     protected Task<Void> createTask() {
         return new Task<Void>() {
@@ -31,10 +34,12 @@ public class FetchFoldersService extends Service<Void> {
             }
         };
     }
+
     private void fetchFolders() throws MessagingException {
         Folder[] folders = store.getDefaultFolder().list();
         handleFolders(folders, foldersRoot);
     }
+
     private void handleFolders(Folder[] folders, EmailTreeItem<String> foldersRoot) throws MessagingException {
         for (Folder folder: folders){
             folderList.add(folder);
@@ -50,6 +55,7 @@ public class FetchFoldersService extends Service<Void> {
             }
         }
     }
+
     private void addMessageListenerToFolder(Folder folder, EmailTreeItem<String> emailTreeItem) {
         folder.addMessageCountListener(new MessageCountListener() {
             @Override
@@ -69,6 +75,7 @@ public class FetchFoldersService extends Service<Void> {
             }
         });
     }
+
     private void fetchMessagesOnFolder(Folder folder, EmailTreeItem<String> emailTreeItem) {
         Service fetchMessagesService = new Service() {
             @Override

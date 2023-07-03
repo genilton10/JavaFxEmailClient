@@ -11,6 +11,7 @@ import javax.mail.Multipart;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import java.io.IOException;
+
 public class MessageRendererService extends Service {
     private EmailMessage emailMessage;
     private WebEngine webEngine;
@@ -22,12 +23,15 @@ public class MessageRendererService extends Service {
             displayMessage();
         });
     }
+
     public void setEmailMessage (EmailMessage emailMessage){
         this.emailMessage = emailMessage;
     }
+
     private void displayMessage(){
         webEngine.loadContent(stringBuffer.toString());
     }
+
     @Override
     protected Task createTask() {
         return new Task() {
@@ -42,6 +46,7 @@ public class MessageRendererService extends Service {
             }
         };
     }
+
     private void LoadMessage() throws MessagingException, IOException {
         stringBuffer.setLength(0);//clears the SB
         Message message = emailMessage.getMessage();
@@ -53,6 +58,7 @@ public class MessageRendererService extends Service {
             loadMultipart(multipart, stringBuffer);
         }
     }
+
     private void loadMultipart(Multipart multipart, StringBuffer stringBuffer) throws MessagingException, IOException {
         for (int i = multipart.getCount() - 1; i>=0; i--){
             BodyPart bodyPart = multipart.getBodyPart(i);
@@ -69,9 +75,11 @@ public class MessageRendererService extends Service {
             }
         }
     }
+
     private boolean isTextPlain (String contentType){
         return contentType.contains("TEXT/PLAIN");
     }
+
     private boolean isSimpleType(String contentType){
         if(contentType.contains("TEXT/HTML") || contentType.contains("mixed")
         || contentType.contains("text")){
@@ -80,6 +88,7 @@ public class MessageRendererService extends Service {
             return false;
         }
     }
+
     private boolean isMultipartType(String contentType){
         if(contentType.contains("multipart")){
             return true;

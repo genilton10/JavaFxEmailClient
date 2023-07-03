@@ -1,4 +1,5 @@
 package com.lisboa.controller;
+
 public enum EmailLoginResult {
     SUCCESS,
     FAILED_BY_CREDENTIALS,

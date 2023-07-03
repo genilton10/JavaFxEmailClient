@@ -12,13 +12,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.web.HTMLEditor;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-
 import java.io.File;
 import java.net.URL;
 import java.util.*;
 
 public class ComposeMessageController extends BaseController implements Initializable {
-
     private List<File> attachments = new ArrayList<File>();
     @FXML
     private Label errorLabel;
@@ -30,6 +28,7 @@ public class ComposeMessageController extends BaseController implements Initiali
     private TextField subjectTextField;
     @FXML
     private ChoiceBox<EmailAccount> emailAccountChoice;
+
     @FXML
     void attachBtnAction() {
         FileChooser fileChooser = new FileChooser();
@@ -38,6 +37,7 @@ public class ComposeMessageController extends BaseController implements Initiali
             attachments.add(selectedFile);
         }
     }
+
     @FXML
     void sendButtonAction() {
         EmailSenderService emailSenderService = new EmailSenderService(
@@ -64,9 +64,11 @@ public class ComposeMessageController extends BaseController implements Initiali
             }
         });
     }
+
     public ComposeMessageController(EmailManager emailManager, ViewFactory viewFactory, String fxmlName) {
         super(emailManager, viewFactory, fxmlName);
     }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         emailAccountChoice.setItems(emailManager.getEmailAccounts());

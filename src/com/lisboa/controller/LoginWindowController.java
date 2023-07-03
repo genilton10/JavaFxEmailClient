@@ -1,17 +1,18 @@
 package com.lisboa.controller;
 
-        import com.lisboa.EmailManager;
-        import com.lisboa.controller.services.LoginService;
-        import com.lisboa.model.EmailAccount;
-        import com.lisboa.view.ViewFactory;
-        import javafx.fxml.FXML;
-        import javafx.fxml.Initializable;
-        import javafx.scene.control.Label;
-        import javafx.scene.control.PasswordField;
-        import javafx.scene.control.TextField;
-        import javafx.stage.Stage;
-        import java.net.URL;
-        import java.util.ResourceBundle;
+import com.lisboa.EmailManager;
+import com.lisboa.controller.services.LoginService;
+import com.lisboa.model.EmailAccount;
+import com.lisboa.view.ViewFactory;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 public class LoginWindowController extends BaseController implements Initializable {
     @FXML
     private TextField emailAddressField;
@@ -19,9 +20,11 @@ public class LoginWindowController extends BaseController implements Initializab
     private Label errorLabel;
     @FXML
     private PasswordField passwordField;
+
     public LoginWindowController(EmailManager emailManager, ViewFactory viewFactory, String fxmlName) {
         super(emailManager, viewFactory, fxmlName);
     }
+
     @FXML
     void loginButtonAction() {
         System.out.println("loginButtonAction!");
@@ -52,6 +55,7 @@ public class LoginWindowController extends BaseController implements Initializab
             });
         }
     }
+
     private boolean fieldsAreValid() {
         if(emailAddressField.getText().isEmpty()){
             errorLabel.setText("Please fill email");
@@ -63,10 +67,11 @@ public class LoginWindowController extends BaseController implements Initializab
         }
         return true;
     }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         emailAddressField.setText("glemailtest2023@gmail.com");
-        passwordField.setText("zdnefzwawinodfvw");
+        passwordField.setText("");
     }
 }
 

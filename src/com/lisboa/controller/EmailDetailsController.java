@@ -12,7 +12,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.web.WebView;
-
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeBodyPart;
 import java.awt.*;
@@ -24,16 +23,12 @@ public class EmailDetailsController extends BaseController implements Initializa
     private String LOCATION_OF_DOWNLOADS = System.getProperty("user.home")+"/Downloads/EmailDownloads/";
     @FXML
     private HBox hBoxDownloads;
-
     @FXML
     private Label senderLabel;
-
     @FXML
     private Label subjectLabel;
-
     @FXML
     private Label attachmentLabel;
-
     @FXML
     private WebView webView;
 
@@ -51,7 +46,6 @@ public class EmailDetailsController extends BaseController implements Initializa
         } catch (MessagingException e) {
             throw new RuntimeException(e);
         }
-
         MessageRendererService messageRendererService = new MessageRendererService(webView.getEngine());
         messageRendererService.setEmailMessage(emailMessage);
         messageRendererService.restart();
@@ -68,6 +62,7 @@ public class EmailDetailsController extends BaseController implements Initializa
             attachmentLabel.setText("");
         }
     }
+
     private class AttachmentButton extends Button{
         private MimeBodyPart mimeBodyPart;
         private String downloadsFilePath;
@@ -78,6 +73,7 @@ public class EmailDetailsController extends BaseController implements Initializa
 
             this.setOnAction(e->downloadAttachment());
         }
+
         private void downloadAttachment(){
             colorBlue();
             Service service = new Service() {
@@ -108,9 +104,11 @@ public class EmailDetailsController extends BaseController implements Initializa
                 });
             });
         }
+
         private void colorBlue(){
             this.setStyle("-fx-background-color: Blue");
         }
+
         private void colorGreen(){
             this.setStyle("-fx-background-color: Green");
         }

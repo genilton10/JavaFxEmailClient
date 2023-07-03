@@ -29,6 +29,7 @@ public class EmailSenderService extends Service<EmailSendingResult> {
         this.content = content;
         this.attachments = attachments;
     }
+
     @Override
     protected Task<EmailSendingResult> createTask() {
         return new Task<EmailSendingResult>() {

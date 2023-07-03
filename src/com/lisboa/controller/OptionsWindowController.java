@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import java.net.URL;
 import java.util.ResourceBundle;
+
 public class OptionsWindowController extends BaseController implements Initializable {
     public OptionsWindowController(EmailManager emailManager, ViewFactory viewFactory, String fxmlName) {
         super(emailManager, viewFactory, fxmlName);
@@ -21,22 +22,26 @@ public class OptionsWindowController extends BaseController implements Initializ
     private Slider fontSizePicker;
     @FXML
     private ChoiceBox<ColorTheme> themePicker;
+
     @FXML
     void applyBtnAction() {
         viewFactory.setColorTheme(themePicker.getValue());
         viewFactory.setFontSize(FontSize.values()[(int)(fontSizePicker.getValue())]);
         viewFactory.updateStyles();
     }
+
     @FXML
     void cancelBtnAction() {
         Stage stage = (Stage) fontSizePicker.getScene().getWindow();
         viewFactory.closeStage(stage);
     }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         setUpThemePicker();
         setUpSizePicker();
     }
+
     private void setUpSizePicker(){
         fontSizePicker.setMin(0);
         fontSizePicker.setMax(FontSize.values().length-1);
@@ -62,6 +67,7 @@ public class OptionsWindowController extends BaseController implements Initializ
             fontSizePicker.setValue(newVal.intValue());
         });
     }
+
     private void setUpThemePicker() {
         themePicker.setItems(FXCollections.observableArrayList(ColorTheme.values()));
         themePicker.setValue(viewFactory.getColorTheme());

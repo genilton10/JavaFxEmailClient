@@ -5,6 +5,7 @@ public class SizeInteger implements Comparable<SizeInteger>{
     public SizeInteger(int size) {
         this.size = size;
     }
+
     @Override
     public String toString(){
         if(size <=0){
@@ -17,6 +18,7 @@ public class SizeInteger implements Comparable<SizeInteger>{
             return size / 1048576 + "MB";
         }
     }
+
     @Override
     public int compareTo(SizeInteger o) {
         if(size > o.size) {

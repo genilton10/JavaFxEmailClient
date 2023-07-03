@@ -4,11 +4,13 @@ import javafx.concurrent.Service;
 import javafx.concurrent.Task;
 import javax.mail.Folder;
 import java.util.List;
+
 public class FolderUpdaterService extends Service {
     private List<Folder> folderList;
     public FolderUpdaterService(List<Folder> folderList) {
         this.folderList = folderList;
     }
+
     @Override
     protected Task createTask() {
         return new Task() {
