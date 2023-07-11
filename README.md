@@ -11,15 +11,15 @@ A aplicação consiste em um gerenciador de email, onde é possivel enviar e rec
 
 ## Layouts
 ### Tela - Login
-![Login Window](https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/loginWindow.png)
+<kbd>![Login Window]("https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/loginWindow.png)</kbd>
 ### Tela - Principal
-![Main Window](https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/mainWindow.png)
+<kbd>![Main Window](https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/mainWindow.png)</kbd>
 ### Tela - Opções
-![Options](https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/optionsWindow.png)
+<kbd>![Options](https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/optionsWindow.png)</kbd>
 ### Tela - Principal Dark
-![Main Window Dark](https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/mainWindowDark.png)
+<kbd>![Main Window Dark](https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/mainWindowDark.png)</kbd>
 ### Tela - Escrever Mensagem
-![Compose Message Window](https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/composeMessageWindow.png)
+<kbd>![Compose Message Window](https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/composeMessageWindow.png)</kbd>
 
 # Tecnologias utilizadas
 ## Back end
