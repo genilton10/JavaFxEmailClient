@@ -11,7 +11,7 @@ A aplicação consiste em um gerenciador de email, onde é possivel enviar e rec
 
 ## Layouts
 ### Tela - Login
-<kbd>![Login Window]("https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/loginWindow.png)</kbd>
+<kbd>![Login Window](https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/loginWindow.png)</kbd>
 ### Tela - Principal
 <kbd>![Main Window](https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/mainWindow.png)</kbd>
 ### Tela - Opções
