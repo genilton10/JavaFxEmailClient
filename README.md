@@ -9,6 +9,17 @@ JavaFX Email Client é uma aplicação back-end e front-end construída durante 
 
 A aplicação consiste em um gerenciador de email, onde é possivel enviar e receber email inclusive com anexo.
 
+## Layouts
+![Login Window](https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/loginWindow.png)
+
+![Main Window](https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/mainWindow.png)
+
+![Options](https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/optionsWindow.png)
+
+![Main Window Dark](https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/mainWindowDark.png)
+
+![Compose Message Window](https://github.com/genilton10/JavaFxEmailClient/blob/main/src/com/lisboa/view/img/composeMessageWindow.png)
+
 # Tecnologias utilizadas
 ## Back end
 - JavaFX
